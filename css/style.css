@@ -1,30 +1,79 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-v14-latin-700.woff') format('woff'), url('../fonts/montserrat-v14-latin-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-v14-latin-800.woff') format('woff'), url('../fonts/montserrat-v14-latin-800.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto slab';
+    src: url('../fonts/roboto-slab-v11-latin-regular.woff') format('woff'), url('../fonts/roboto-slab-v11-latin-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidSerif';
+    src: url('../fonts/droidSerif-italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'WisdomScript';
+    src: url('../fonts/wisdom-script.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+:root {
+    --font-first: "Montserrat", sans-serif;
+    --font-second: "Roboto slab", sans-serif;
+    --font-third: "DroidSerif", sans-serif;
+    --font-logotype: "WisdomScript", sans-serif;
+}
+
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-}
-
-.navigation__list-item:not(:last-child) {
-    margin-right: 40px;
-}
-
-.navigation__list-link {
-    color: #000000;
-    text-transform: uppercase;
-}
-
-.services {
-    text-align: center;
-}
-
-.section-title {
-    font-size: 40px;
-    text-transform: uppercase;
-}
-
-.section_description {
-    font-size: 16px;
-    font-style: italic;
 }
 
 html {
@@ -44,19 +93,6 @@ img {
 
 a {
     text-decoration: none;
-}
-
-body {
-    /* font-family: 'Montserrat', sans-serif; */
-}
-
-
-/* font-family: 'Kaushan Script', cursive; */
-
-.clearfix::after {
-    content: '';
-    display: table;
-    clear: both;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -83,6 +119,29 @@ input[type="radio"].visually-hidden {
     padding-bottom: 124px;
 }
 
+.navigation__list-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.navigation__list-link {
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.services {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.section_description {
+    font-size: 16px;
+    font-style: italic;
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -91,10 +150,14 @@ input[type="radio"].visually-hidden {
 }
 
 .logotype {
+    font-family: var(--font-logotype);
     color: #fed136;
     text-transform: capitalize;
     font-size: 26px;
     font-style: italic;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function: linear;
 }
 
 .navigation__list {
@@ -106,9 +169,13 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation__list-link {
+    font-family: var(--font-first);
+    font-size: 14px;
+    font-weight: 700;
     color: #000000;
     text-transform: uppercase;
-    transition: color 200ms linear;
+    transition-timing-function: linear;
+    transition-duration: 0.5s;
 }
 
 .navigation__list-link:hover {
@@ -121,6 +188,8 @@ input[type="radio"].visually-hidden {
 }
 
 .section-title {
+    font-family: var(--font-first);
+    font-weight: 800;
     font-size: 40px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -168,13 +237,18 @@ input[type="radio"].visually-hidden {
 }
 
 .services__list-title {
+    font-family: var(--font-first);
+    font-weight: 700;
     font-size: 18px;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
 
 .services__list-discription {
+    font-family: var(--font-second);
+    font-weight: 400;
     font-size: 14px;
+    color: #777777;
 }
 
 .contact {
@@ -201,10 +275,6 @@ input[type="radio"].visually-hidden {
     width: 459px;
 }
 
-.textarea {
-    font-size: 25px;
-}
-
 .singup input {
     border: 1px solid rgb(204, 204, 204);
     border-radius: 2px;
@@ -219,18 +289,22 @@ input[type="radio"].visually-hidden {
     border-style: 1px solid rgb(204, 204, 204);
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
-    padding: 20px;
+    padding: 18px;
     width: 457px;
     height: 214px;
 }
 
 .singup input::placeholder {
+    font-family: var(--font-first);
+    font-weight: 700;
     font-size: 14px;
     color: #bbbbbb;
     text-transform: uppercase;
 }
 
 .singup textarea::placeholder {
+    font-family: var(--font-first);
+    font-weight: 700;
     font-size: 14px;
     color: #bbbbbb;
     text-transform: uppercase;
@@ -247,6 +321,8 @@ input[type="radio"].visually-hidden {
 .button {
     display: block;
     margin: 0 auto;
+    font-family: var(--font-first);
+    font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
     border-radius: 3px;
@@ -257,6 +333,12 @@ input[type="radio"].visually-hidden {
     cursor: pointer;
     outline: none;
     border: none;
+    transition-timing-function: linear;
+    transition-duration: 0.5s;
+}
+
+.button:hover {
+    background-color: rgb(194, 161, 43);
 }
 
 .singup__list-item input[type='text']:valid,
@@ -272,6 +354,9 @@ input[type="radio"].visually-hidden {
 }
 
 .singup__list-item input[type='text'],
-.singup__list-item input[type='email'] {
+.singup__list-item input[type='email'],
+.textarea {
     font-size: 16px;
+    font-family: var(--font-first);
+    font-weight: 700;
 }
