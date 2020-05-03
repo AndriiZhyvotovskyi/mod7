@@ -201,6 +201,10 @@ input[type="radio"].visually-hidden {
     width: 459px;
 }
 
+.textarea {
+    font-size: 25px;
+}
+
 .singup input {
     border: 1px solid rgb(204, 204, 204);
     border-radius: 2px;
@@ -253,4 +257,21 @@ input[type="radio"].visually-hidden {
     cursor: pointer;
     outline: none;
     border: none;
+}
+
+.singup__list-item input[type='text']:valid,
+.singup__list-item input[type='email']:valid,
+.textarea:valid {
+    outline-color: green;
+}
+
+.singup__list-item input[type='text']:invalid,
+.singup__list-item input[type='email']:invalid,
+.textarea:invalid {
+    outline-color: red;
+}
+
+.singup__list-item input[type='text'],
+.singup__list-item input[type='email'] {
+    font-size: 16px;
 }
