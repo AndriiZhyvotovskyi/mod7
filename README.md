@@ -1,3 +1,3 @@
 # mod7
 
-<img src="/img/team/preview.jpg" alt="demonstration">
+<img src="/img/demonstration.jpg" alt="demonstration">
