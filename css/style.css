@@ -290,8 +290,7 @@ input[type="radio"].visually-hidden {
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     padding: 18px;
-    width: 457px;
-    height: 214px;
+    width: 50%;
 }
 
 .singup input::placeholder {
