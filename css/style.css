@@ -195,7 +195,7 @@ input[type="radio"].visually-hidden {
     margin-bottom: 20px;
 }
 
-.section_discription {
+.section-discription {
     font-size: 16px;
     font-style: italic;
     margin-bottom: 80px;
@@ -287,7 +287,7 @@ input[type="radio"].visually-hidden {
 
 .textarea {
     resize: none;
-    border-style: 1px solid rgb(204, 204, 204);
+    border: 1px solid rgb(204, 204, 204);
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     padding: 18px;
@@ -308,14 +308,6 @@ input[type="radio"].visually-hidden {
     font-size: 14px;
     color: #bbbbbb;
     text-transform: uppercase;
-}
-
-.Your_Name___Field {
-    border-style: 1px solid rgb(204, 204, 204);
-    border-radius: 2px;
-    background-color: rgb(255, 255, 255);
-    width: 459px;
-    height: 54px;
 }
 
 .button {
